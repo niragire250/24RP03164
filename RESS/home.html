@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RULINDO ELECTRICITY SERVICE SUPPORT</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4;
+      padding: 10px;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav img {
+      height: 24px;
+    }
+
+    header {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .search-bar {
+      padding: 10px;
+      margin-top: 10px;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    .product-header h2 {
+      text-align: center;
+      margin: 30px 0 10px;
+    }
+
+    .product-slider {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .slide-img {
+      width: 45%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    .slide-img.active {
+      display: inline-block;
+    }
+
+    .but {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .but button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .but button:hover {
+      background-color: #0056b3;
+    }
+
+    video {
+      width: 90%;
+      max-width: 720px;
+      display: block;
+      margin: 20px auto 30px;
+    }
+
+    section p {
+      font-size: 18px;
+      color: blue;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 10px;
+    }
+
+    .map-contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .map-section, .contact-section {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .map-section iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+
+    .contact-section {
+      text-align: center;
+    }
+
+    .contact-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contact-section li {
+      margin: 10px 0;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .search-bar {
+        width: 90%;
+      }
+
+      .slide-img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="home.html"><img src="home.png" alt="Home">Home</a>
+    <a href="Report issue.HTML"><img src="issuer.jpeg" alt="Report Issue">Report Issue</a>
+    <a href="contact us.html"><img src="contact us.png" alt="Contact Us">Contact Us</a>
+  </nav>
+
+  <section id="home">
+    <div class="container">
+      <header>
+        <h1><img src="logocut.jpeg" alt="icon" class="icon"> RESS (Rulindo Electricity Service Support)</h1>
+        <input type="text" placeholder="Search..." class="search-bar">
+      </header>
+
+      <div class="product-header">
+        <h2>Welcome to the RESS ..</h2>
+      </div>
+
+      <div class="product-slider">
+        <!-- First set -->
+        <img src="el.jpeg" class="slide-img set1 active">
+        <img src="th.jpeg" class="slide-img set1 active">
+
+        <!-- Second set -->
+        <img src="elect.jpg" class="slide-img set2">
+        <img src="the2.jpeg" class="slide-img set2">
+      </div>
+
+      <div class="but">
+        <button onclick="showPrevious()">Previous</button>
+        <button onclick="showNext()">Next</button>
+      </div>
+
+      <video controls>
+        <source src="electricity.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <section>
+    <p>Our mission is to ensure reliable and efficient electricity access for all households in the community. We provide support for new connections, report handling for power outages, and guidance on safe electricity use. Through regular monitoring and service distribution, we help residents manage energy usage effectively and stay informed about billing and maintenance schedules. Our office is committed to improving the quality of life through dependable electricity services.</p>
+  </section>
+
+  <div class="container map-contact-wrapper">
+    <div class="map-section">
+      <iframe src="https://www.google.com/maps?q=Rulindo+District+Office&output=embed" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="contact-section">
+      <h2>CONTACT US</h2>
+      <ul>
+        <li><span class="icon">📞</span> 1357</li>
+        <li><span class="icon">✉️</span> rulindoelect@support.gov.rw</li>
+        <li><span class="icon">📬</span> Government Smart Admin System (GSAS)</li>
+        <li><span class="icon">🔗</span> Privacy policy</li>
+      </ul>
+      <div class="social-icons">
+        <a href="#">Facebook</a>
+        <a href="#">X</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+      </div>
+      <p>© 2025 Repubulika y’u Rwanda - Rulindo district</p>
+    </div>
+  </div>
+
+  <script>
+    let showingSet = 1;
+
+    function showSet(setNumber) {
+      const set1 = document.querySelectorAll('.set1');
+      const set2 = document.querySelectorAll('.set2');
+
+      if (setNumber === 1) {
+        set1.forEach(img => img.classList.add('active'));
+        set2.forEach(img => img.classList.remove('active'));
+      } else {
+        set1.forEach(img => img.classList.remove('active'));
+        set2.forEach(img => img.classList.add('active'));
+      }
+
+      showingSet = setNumber;
+    }
+
+    function showNext() {
+      if (showingSet === 1) {
+        showSet(2);
+      }
+    }
+
+    function showPrevious() {
+      if (showingSet === 2) {
+        showSet(1);
+      }
+    }
+
+    showSet(1);
+  </script>
+</body>
+</html>

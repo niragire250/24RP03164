@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESS</title>
+  <link rel="stylesheet" href="contact us.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    header .icon {
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    /* Navigation wrapper */
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Navigation links */
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    nav a:hover {
+      color: #0d6efd;
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .nav-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>
+        <img src="logocut.jpeg" alt="icon" class="icon" width="60" height="40">
+        RESS (Rulindo Electricity Service Support)
+      </h1>
+      <div class="nav-wrapper">
+        <button class="nav-toggle" onclick="toggleNav()" style="color:white;">☰ Menu</button>
+        <nav id="navbar">
+          <a href="home.html">Home</a>
+          <a href="Report issue.HTML">Report Issue</a>
+          <a href="contact us.html">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <p><strong>Location:</strong> Rulindo</p>
+      <p><strong>Contacts:</strong> 1357</p>
+      <p><strong>WhatsApp:</strong> +2507047853</p>
+      <p><strong>Instagram:</strong> @ress</p>
+      <p><strong>Email:</strong> rulindoelect@support.gov.rw</p>
+    </section>
+
+    <section class="services">
+      <h2>About RESS</h2>
+      <p>
+        Have questions or need assistance? The Rulindo Electricity Service Support team is here to help you with power issues, new connections, billing, and other electricity-related services. Reach out to us for quick and reliable support.
+      </p>
+    </section>
+  </div>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navbar').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
